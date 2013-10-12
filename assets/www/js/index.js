@@ -62,7 +62,7 @@ document.addEventListener("deviceready", function() {
                             });
                         });
 
-                        if (results.rows.length === 0) {
+                        if (results.rows.length > 0) {
                             $.mobile.changePage("#menu", {transition: "turn", changeHash: false});
                             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
                                 var directoryReader = fileSystem.root.createReader();
